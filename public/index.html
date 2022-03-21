@@ -10,34 +10,73 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Google Trends</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+<!--    <noscript>You need to enable JavaScript to run this app.</noscript>-->
+<!--    <div id="root"></div>-->
+    <header>
+      <nav class="navbar">
+        <div>
+          <button><i class="fa-solid fa-bars fa-3x"></i></button>
+        </div>
+        <div class="search-bar">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text">
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article class="panel">
+        <h1>Самое популярное сейчас: Блокировка</h1>
+        <h2>Популярно сейчас:</h2>
+        <ul>
+          <li>
+            <div>Украина</div>
+            <div>300 тыс. запросов</div>
+          </li>
+          <li>
+            <div>Китай</div>
+            <div>50 тыс. запросов</div>
+          </li>
+          <li>
+            <div>Украина</div>
+            <div>10 тыс. запросов</div>
+          </li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>Темы ставшими популярными в 2021 году</h2>
+        <ul>
+          <li>Дюна</li>
+          <li>Ты Слава Мэрлоу?</li>
+          <li>Алексей Навальный</li>
+          <li>Симпл-Димпл</li>
+          <li>Митинг</li>
+        </ul>
+      </article>
+      <article class="panel hidden" id="search-results">
+        <h1>Тренды слова: Украина</h1>
+        <div>
+          <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2884_RC01/embed_loader.js"></script>
+          <script type="text/javascript">
+            trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"украина","geo":"RU","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0&geo=RU&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
+          </script>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <h5>Author: Egor Golubev</h5>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-vk"></i></a>
+        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </footer>
   </body>
 </html>
