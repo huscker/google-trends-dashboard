@@ -41,18 +41,42 @@ button{
     margin-left: 100px;
     max-width: 300px;
 }
-.fa-solid.fa-magnifying-glass{
-    color: colors.$main-color;
-    font-size: 20px;
-    width: 40px;
+.panel{
+    border-radius: 20px;
+    background: colors.$main-color;
+    color: colors.$secondary-color;
+    padding: 20px;
+    width: 800px;
+    margin:auto;
+    margin-bottom: 20px;
+    border: 2px solid rgba(colors.$secondary-color,0.1);
+    -webkit-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.27);
+    -moz-box-shadow:    4px 4px 6px 0px rgba(50, 50, 50, 0.27);
+    box-shadow:         4px 4px 6px 0px rgba(50, 50, 50, 0.27);
 }
 input[type='text']{
     height: 40px;
+    background: transparent;
+    border:0;
+    color: colors.$attention-color;
+    font-size: 20px;
+    padding-left: 20px;
+    border-bottom: 3px solid colors.$attention-color-variant;
+    outline: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
 }
 .fa-solid.fa-bars{
     color: colors.$main-color;
 }
-.panel{
-    background-color: colors.$main-color;
+footer{
+    margin-top: 40px;
+    height: 100px;
+    background: colors.$secondary-color;
+    color: colors.$main-color;
 }
 .hidden{}
